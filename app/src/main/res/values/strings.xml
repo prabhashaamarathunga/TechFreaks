@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">MobileMania</string>
+    <string name="yourcart">Your Cart</string>
+    <string name="order">Order Summary</string>
+    <string name="total">Total</string>
+    <string name="totalval"></string>
+    <string name="keepshopping">KEEP SHOPPING</string>
+    <string name="checkout">CHECKOUT</string>
+    <string name="checkoutview"></string>
+    <string name="paymentapp">Payment</string>
+    <string name="checkoutapp">Checkout</string>
+    <string name="name">Name</string>
+    <string name="namein"></string>
+    <string name="mobile">Contact No.</string>
+    <string name="mobileno"></string>
+    <string name="method">Payment Method</string>
+    <string name="cardno"></string>
+    <string name="card">Card No.</string>
+    <string name="_0000_0000_0000_0000">0000-0000-0000-0000</string>
+    <string name="address">Delivery Address</string>
+    <string name="addressin"></string>
+    <string name="pay">PAY</string>
+    <string name="item1">ITEM 1</string>
+    <string name="register">REGISTER</string>
+    <string name="login">LOGIN</string>
+    <string name="vaddress"></string>
+    <string name="vname"></string>
+    <string name="vphone"></string>
+
+    <string name="cdelete">DELETE</string>
+    <string name="cupdate">UPDATE</string>
+    <string name="cconfirm">CONFIRM</string>
+    <string name="addDetails">ADD</string>
+    <string name="view_orders">View Orders</string>
+    <string name="view">View Orders</string>
+    <string name="update_orders">Update Orders</string>
+    <string name="id">ID</string>
+    <string name="delete_orders">Delete Order</string>
+    <string name="delete_cart">Delete</string>
+    <string name="vemail" />
+    <string name="citems" />
+
+    <string-array name="paymentm">
+        <item>VISA</item>
+        <item>MasterCard</item>
+    </string-array>
+
+
+</resources>
