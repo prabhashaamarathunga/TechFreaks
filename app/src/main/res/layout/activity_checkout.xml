@@ -69,24 +69,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/delete_cart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="16dp"
-        android:text="@string/delete_cart"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkout"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:layout_width="250dp"
-        android:layout_height="35dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="672dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
