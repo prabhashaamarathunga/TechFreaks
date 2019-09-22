@@ -14,33 +14,48 @@ package com.example.mobilemania;
 
 public class checkout extends AppCompatActivity{
 
-    DBHelper dbHelper;
-    ListView cartView;
+    //DBHelper dbHelper;
+    //ListView cartView;
 
-    ArrayList<String> listItem;
-    ArrayAdapter adapter;
+    private TextView OrderItem;
+    private String Oitem;
+
+
+   // ArrayList<String> listItem;
+   // ArrayAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
 
-        dbHelper = new DBHelper(this);
-        cartView = findViewById(R.id.cart_view);
-        listItem = new ArrayList<>();
-        viewCheck();
+       // dbHelper = new DBHelper(this);
+      //  cartView = findViewById(R.id.cart_view);
+      // listItem = new ArrayList<>();
+       // viewCheck();
 
+        try {
+            Oitem = getIntent().getStringExtra("Item");
+        } catch (Exception e){
+            e.printStackTrace();
+        }
 
+        OrderItem = (TextView) findViewById(R.id.item);
+
+        OrderItem.setText(Oitem);
+
+/*
         cartView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String text = cartView.getItemAtPosition(position).toString();
                 Toast.makeText(checkout.this,""+text,Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
         getIntent();
     }
 
+    /*
     private void viewCheck() {
         Cursor cursor = dbHelper.viewCheckout();
 
@@ -55,7 +70,7 @@ public class checkout extends AppCompatActivity{
             cartView.setAdapter(adapter);
     }
 
-
+*/
 
     public void onClickcheckout(View view){
         Intent intent = new Intent(this, payment.class);
