@@ -25,7 +25,7 @@ public class DelivereyHome extends AppCompatActivity {
     }
 
     public void view_w(View view){
-        Intent intent = new Intent(this, ListCreditor.class);
+        Intent intent = new Intent(this, ListCreditors.class);
         startActivity(intent);
     }
 
