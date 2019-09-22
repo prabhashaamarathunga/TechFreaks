@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class UpdateDeliverer extends AppCompatActivity {
 
     TextView titlec_txt;
-    EditText searchc_name ,newc_name, newc_phone, newc_amount, newc_date;
+    EditText searchc_name ,newc_name, newc_phone, newc_ID, newc_date;
     DBhelper1 dBhelper;
     SQLiteDatabase sqLiteDatabase;
     String searchnamec, Newnamec, Newphonec, Newamountc, Newdatec;
@@ -27,7 +27,7 @@ public class UpdateDeliverer extends AppCompatActivity {
         searchc_name = findViewById(R.id.supdatetxt);
 
         newc_name = findViewById(R.id.update_name);
-        newc_amount = findViewById(R.id.update_id);
+        newc_ID = findViewById(R.id.update_id);
         newc_phone  = findViewById(R.id.update_phone);
         newc_date   = findViewById(R.id.update_date);
 
@@ -35,7 +35,7 @@ public class UpdateDeliverer extends AppCompatActivity {
 
         newc_name.setVisibility(View.GONE);
         newc_phone.setVisibility(View.GONE);
-        newc_amount.setVisibility(View.GONE);
+        newc_ID.setVisibility(View.GONE);
         newc_date.setVisibility(View.GONE);
 
         titlec_txt.setVisibility(View.GONE);
@@ -59,7 +59,7 @@ public class UpdateDeliverer extends AppCompatActivity {
 
     namec = newc_name.getText().toString();
     phonec = newc_phone.getText().toString();
-    amountc = newc_amount.getText().toString();
+    amountc = newc_ID.getText().toString();
     datec = newc_date.getText().toString();
 
     int count = dBhelper.updateCreditors(searchnamec, namec, phonec, amountc,datec,sqLiteDatabase);
@@ -90,12 +90,12 @@ public class UpdateDeliverer extends AppCompatActivity {
 
             newc_name.setText(Newnamec);
             newc_phone.setText(Newphonec);
-            newc_amount.setText(Newamountc);
+            newc_ID.setText(Newamountc);
             newc_date.setText(Newdatec);
 
             newc_name.setVisibility(View.VISIBLE);
             newc_phone.setVisibility(View.VISIBLE);
-            newc_amount.setVisibility(View.VISIBLE);
+            newc_ID.setVisibility(View.VISIBLE);
             newc_date.setVisibility(View.VISIBLE);
         }
     }
