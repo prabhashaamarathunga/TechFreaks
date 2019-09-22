@@ -1,259 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/paymentapp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/payment1"
+    android:background="@android:color/background_light"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".payment">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Order_Details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Details"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/namein"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Name">
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mobileno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contact No"
+            android:inputType="phone"
+            android:maxLength="10">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cardtype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Payment Type"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="false"
+            android:background="@android:drawable/btn_dropdown"
+            android:backgroundTint="?attr/colorBackgroundFloating"
+            android:entries="@array/paymentm"
+            android:spinnerMode="dropdown"
+            android:textColor="@android:color/background_dark" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cardno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="16"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Card No."
+            android:inputType="number"
+            android:maxLength="16">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addressin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Delivery Address"
+            android:inputType="textMultiLine">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/pay"
-        android:layout_width="139dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="110dp"
-        android:background="@color/design_default_color_primary"
-        android:onClick="onClickpay"
-        android:text="@string/pay"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/addDetails"
-        app:layout_constraintTop_toBottomOf="@+id/addressin" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/pay" />
 
     <Button
-        android:id="@+id/addDetails"
-        android:layout_width="133dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginEnd="25dp"
-        android:background="@color/design_default_color_primary"
-        android:onClick="onClickAdd"
-        android:text="@string/addDetails"
-        app:layout_constraintBaseline_toBaselineOf="@+id/pay"
-        app:layout_constraintEnd_toStartOf="@+id/pay"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/namein"
-        android:layout_width="260dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="17dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:ems="10"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:text="@string/namein"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toTopOf="@+id/mobileno"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/id"
-        app:layout_constraintTop_toBottomOf="@+id/checkoutapp" />
-
-
-    <EditText
-        android:id="@+id/mobileno"
-        android:layout_width="262dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="15dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:ems="10"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:text="@string/mobileno"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/mobile2"
-        app:layout_constraintTop_toBottomOf="@+id/namein" />
-
-    <EditText
-        android:id="@+id/cemail"
-        android:layout_width="262dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:ems="10"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:text="@string/mobileno"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toTopOf="@+id/paymentm"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/email"
-        app:layout_constraintTop_toBottomOf="@+id/mobileno" />
-
-    <EditText
-        android:id="@+id/cardno"
-        android:layout_width="360dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="13dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:drawableTint="@android:color/background_light"
-        android:ems="10"
-        android:hint="@string/_0000_0000_0000_0000"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:text="@string/cardno"
-        android:textColor="@android:color/background_light"
-        android:textColorHint="@android:color/darker_gray"
-        app:layout_constraintBottom_toTopOf="@+id/address"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.187"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card" />
-
-    <EditText
-        android:id="@+id/addressin"
-        android:layout_width="362dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="21dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/addressin"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toTopOf="@+id/pay"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/address" />
-
-    <Spinner
-        android:id="@+id/paymentm"
-        android:layout_width="195dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="28dp"
-        android:animateLayoutChanges="false"
-        android:background="@android:drawable/btn_dropdown"
-        android:backgroundTint="?attr/colorBackgroundFloating"
-        android:entries="@array/paymentm"
-        android:spinnerMode="dialog"
-        android:textColor="@android:color/background_dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/method2"
-        app:layout_constraintTop_toBottomOf="@+id/mobileno" />
-
-    <TextView
-        android:id="@+id/checkoutapp"
-        android:layout_width="395dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="28dp"
-        android:background="@android:color/black"
-        android:text="@string/checkoutapp"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_light"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/id"
-        android:layout_width="98dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/name"
-        android:textColor="@android:color/background_light"
-        android:textSize="20sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/namein"
-        app:layout_constraintEnd_toStartOf="@+id/namein"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/card"
-        android:layout_width="166dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="213dp"
-        android:layout_marginBottom="8dp"
-        android:text="@string/card"
-        android:textColor="@android:color/background_light"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/cardno"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.312"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/method2"
-        tools:text="@string/card" />
-
-    <TextView
-        android:id="@+id/method2"
-        android:layout_width="166dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="2dp"
-        android:text="@string/method"
-        android:textColor="@android:color/background_light"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/paymentm"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mobile2"
-        tools:text="@string/method" />
-
-    <TextView
-        android:id="@+id/mobile2"
-        android:layout_width="110dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="4dp"
-        android:text="@string/mobile"
-        android:textColor="@android:color/background_light"
-        android:textSize="20sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/mobileno"
-        app:layout_constraintEnd_toStartOf="@+id/mobileno"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="110dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginEnd="4dp"
-        android:text="Email"
-        android:textColor="@android:color/background_light"
-        android:textSize="20sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/cemail"
-        app:layout_constraintEnd_toStartOf="@+id/cemail"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/address"
-        android:layout_width="wrap_content"
+        android:id="@+id/clear"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="224dp"
-        android:layout_marginBottom="11dp"
-        android:text="@string/address"
-        android:textColor="@android:color/background_light"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/addressin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardno" />
+        android:text="@string/clear" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
