@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".yourOrders"></activity>
+        <activity android:name=".AdminLogin"></activity>
+        <activity android:name=".yourOrders" />
         <activity android:name=".ViewPayment" />
         <activity android:name=".Waiting" />
         <activity android:name=".payment" />
@@ -21,8 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UserAccount"/>
-        <activity android:name=".Login"/>
+        <activity android:name=".UserAccount" />
+        <activity android:name=".Login" />
         <activity android:name=".UserMain" />
         <activity android:name=".ADminMenu" />
         <activity android:name=".Registration" />

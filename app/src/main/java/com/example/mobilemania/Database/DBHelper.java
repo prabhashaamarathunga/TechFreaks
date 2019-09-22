@@ -254,6 +254,38 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
+    public int adminlogin(String password) {
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+
+        String query = "SELECT * FROM "+ UsrMaster.Usr.TABLE_NAME +" WHERE "+ UsrMaster.Usr.COLUMN_NAME_USERNAME + " = ?";
+        String[] s = {"Admin"};
+
+        Cursor result = sqLiteDatabase.rawQuery(query, s);
+
+        if(result.getCount() == 0){
+            //no username
+            return -1;
+        }
+
+        String dbPassword;
+
+        while(result.moveToNext()){
+            dbPassword = result.getString(4);
+
+            if(!dbPassword.equals(password)){
+                //invalid pwd
+                return 0;
+            }
+            else{
+                //login success
+                return 1;
+            }
+        }
+
+        return  -2;
+
+    }
+
 
 
 

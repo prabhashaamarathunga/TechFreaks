@@ -39,14 +39,10 @@
     <string name="citems" />
     <string name="clear">Clear</string>
 
-    <string-array name="paymentm">
-        <item>VISA</item>
-        <item>MasterCard</item>
-    </string-array>
+    <string name="textView1">User Name</string>
 
 
     -----------------------Maneesha---------------------------------
-    <string name="textView1">User Name</string>
     <string name="UserName">Enter your user name</string>
     <string name="textView2">Password</string>
     <string name="Password">Enter Your Password</string>
@@ -75,6 +71,11 @@
     <string name="btnBack">Back</string>
     <string name="btnView">View</string>
     <string name="manage_orders">Manage Orders</string>
+    <string name="adminlogin">Admin Login</string>
+    <string-array name="paymentm">
+        <item>VISA</item>
+        <item>MasterCard</item>
+    </string-array>
 
 
 </resources>
