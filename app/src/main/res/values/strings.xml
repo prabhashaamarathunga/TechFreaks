@@ -91,4 +91,33 @@
     <string name="add_item">ADD ITEM</string>
     <string name="search_">Search</string>
 
+    ----------------------------------Tharusha----------------------------------------------------
+
+    <string name="add_btn">Add Deliverer</string>
+    <string name="view_btn">View Deliverer</string>
+    <string name="txt_creditor">DELIVERER</string>
+    <string name="txt_debitor">DEBITORS</string>
+    <string name="home_c">DELIVERER</string>
+    <string name="home_d">DEBITORS</string>
+    <string name="txt_addDeliverer">Delivery Home</string>
+    <string name="add_namec"></string>
+    <string name="add_phonec"></string>
+    <string name="add_id"></string>
+    <string name="add_datec"></string>
+    <string name="savec_btn">SAVE DETAILS</string>
+    <string name="clearc_btn">CLEAR ALL</string>
+    <string name="txt_searchc">SEARCH HERE</string>
+    <string name="searchtxtc"></string>
+    <string name="btn_searchback">BACK </string>
+    <string name="btn_dlt">DELETE </string>
+    <string name="txt_updatec">UPDATE DETAILS</string>
+    <string name="supdatetxt"></string>
+    <string name="update_name"></string>
+    <string name="btn_updateback">BACK </string>
+    <string name="btn_update">UPDATE</string>
+    <string name="txt_addDeliverer1">ADD DELIVERY</string>
+    <string name="ADAssignId">Order ID</string>
+    <string name="ADDeliryPersn">Delivery Person</string>
+    <string name="ADDelivery">Add Details</string>
+
 </resources>

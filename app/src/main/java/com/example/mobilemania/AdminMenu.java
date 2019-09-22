@@ -22,7 +22,7 @@ public class AdminMenu extends AppCompatActivity {
     }
 
     public void onClickDelivery(View view){
-        Intent intent = new Intent(this, ItemMainActivity.class);
+        Intent intent = new Intent(this, DelivereyHome.class);
         startActivity(intent);
     }
 }
