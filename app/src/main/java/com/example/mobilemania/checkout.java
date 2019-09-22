@@ -16,8 +16,6 @@ public class checkout extends AppCompatActivity{
 
     DBHelper dbHelper;
     ListView cartView;
-    TextView Item;
-    String Itemv;
 
     ArrayList<String> listItem;
     ArrayAdapter adapter;
@@ -30,11 +28,8 @@ public class checkout extends AppCompatActivity{
         dbHelper = new DBHelper(this);
         cartView = findViewById(R.id.cart_view);
         listItem = new ArrayList<>();
-        Item = findViewById(R.id.itemcart);
         viewCheck();
 
-        Itemv = getIntent().getExtras().getString("Item");
-        Item.setText(Itemv);
 
         cartView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -64,6 +59,11 @@ public class checkout extends AppCompatActivity{
 
     public void onClickcheckout(View view){
         Intent intent = new Intent(this, payment.class);
+        startActivity(intent);
+    }
+
+    public void onClickkeepshopping(View view){
+        Intent intent = new Intent(this, LoginItemList.class);
         startActivity(intent);
     }
 }

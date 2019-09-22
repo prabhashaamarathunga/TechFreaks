@@ -30,6 +30,7 @@
         android:layout_marginEnd="31dp"
         android:layout_marginBottom="80dp"
         android:background="@color/design_default_color_primary"
+        android:onClick="onClickkeepshopping"
         android:text="@string/keepshopping"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/checkout"
@@ -66,19 +67,6 @@
         app:layout_constraintBottom_toTopOf="@+id/cart_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/itemcart"
-        android:layout_width="302dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="62dp"
-        android:layout_marginBottom="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/order"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

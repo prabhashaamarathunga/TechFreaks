@@ -2,6 +2,7 @@ package com.example.mobilemania;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -73,5 +74,15 @@ public class ViewPayment extends AppCompatActivity {
             case R.id.cconfirm: addData();
                 break;
         }
+    }
+
+    public void onClickManageOrders(View view){
+        Intent intent = new Intent(this, yourOrders.class);
+        startActivity(intent);
+    }
+
+    public void onClickkeepshopping(View view){
+        Intent intent = new Intent(this, LoginItemList.class);
+        startActivity(intent);
     }
 }

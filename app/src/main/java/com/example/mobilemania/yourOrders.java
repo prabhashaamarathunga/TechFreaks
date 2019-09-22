@@ -7,10 +7,10 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.mobilemania.Database.DBHelper;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class yourOrders extends AppCompatActivity {
 
@@ -18,7 +18,11 @@ public class yourOrders extends AppCompatActivity {
     Button btnviewOrders;
     Button btnupdateOrders;
     Button btndeleteOrders;
-    EditText editname, editphone, editaddress, editid, editemail;
+    private TextInputLayout editname;
+    private TextInputLayout editphone;
+    private TextInputLayout editaddress;
+    private TextInputLayout editid;
+    private TextInputLayout editemail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +31,11 @@ public class yourOrders extends AppCompatActivity {
 
         dbHelper = new DBHelper(this);
 
-        editid = (EditText) findViewById(R.id.id);
-        editname = (EditText) findViewById(R.id.name);
-        editphone = (EditText) findViewById(R.id.phone);
-        editaddress = (EditText) findViewById(R.id.address);
-        editemail = (EditText) findViewById(R.id.email);
+        editid = findViewById(R.id.id);
+        editname = findViewById(R.id.name);
+        editphone = findViewById(R.id.phone);
+        editaddress = findViewById(R.id.address);
+        editemail = findViewById(R.id.email);
 
         btnviewOrders = (Button)findViewById(R.id.view_orders);
         btnupdateOrders = (Button)findViewById(R.id.update_orders);
@@ -73,11 +77,13 @@ public class yourOrders extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        boolean isUpdate = dbHelper.updateOrders(editid.getText().toString(),
-                                editname.getText().toString(),
-                                editphone.getText().toString(),
-                                editaddress.getText().toString(),
-                                editemail.getText().toString());
+                        if (!validateName() | !validatePhone() | !validateEmail() | !validateAddress()){
+                            return;}
+                        boolean isUpdate = dbHelper.updateOrders(editid.getEditText().getText().toString(),
+                                editname.getEditText().getText().toString(),
+                                editphone.getEditText().getText().toString(),
+                                editaddress.getEditText().getText().toString(),
+                                editemail.getEditText().getText().toString());
 
                         if(isUpdate == true)
                             Toast.makeText(yourOrders.this,"Updated Succesful",Toast.LENGTH_LONG).show();
@@ -93,7 +99,7 @@ public class yourOrders extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Integer deletedRows = dbHelper.deleteOrders(editid.getText().toString());
+                        Integer deletedRows = dbHelper.deleteOrders(editid.getEditText().getText().toString());
                         if(deletedRows > 0)
                             Toast.makeText(yourOrders.this,"Deleted Succesful",Toast.LENGTH_LONG).show();
                         else
@@ -113,6 +119,73 @@ public class yourOrders extends AppCompatActivity {
         builder.show();
     }
 
+
+    private boolean validateName() {
+
+        String NameInput = editname.getEditText().getText().toString().trim();
+        String NamePattern = "^[a-zA-Z\\s]*$";
+
+        if(NameInput.isEmpty()){
+            editname.setError("Field can't be empty");
+            return false;
+        }
+        else if(!NameInput.matches(NamePattern)){
+            editname.setError("Incorrect Name");
+            return false;
+        }
+        else {
+            editname.setError(null);
+            return true;
+        }
+    }
+
+    private boolean validateAddress(){
+        String addressInput = editaddress.getEditText().getText().toString().trim();
+
+        if(addressInput.isEmpty()){
+            editaddress.setError("Field can't be empty");
+            return false;
+        }
+        else {
+            editaddress.setError(null);
+            return true;
+        }
+    }
+
+    private boolean validateEmail(){
+        String emailInput = editemail.getEditText().getText().toString().trim();
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+.[a-z]+";
+
+        if(emailInput.isEmpty()){
+            editemail.setError("Field can't be empty");
+            return false;
+        }
+        else if(!emailInput.matches(emailPattern)){
+            editemail.setError("Incorrect Email");
+            return false;
+        }
+        else {
+            editemail.setError(null);
+            return true;
+        }
+    }
+
+    private boolean validatePhone(){
+        String phoneInput = editphone.getEditText().getText().toString().trim();
+
+        if(phoneInput.isEmpty()){
+            editphone.setError("Field can't be empty");
+            return false;
+        }
+        else if(phoneInput.length() < 10){
+            editphone.setError("Incorrect Mobile Number");
+            return false;
+        }
+        else {
+            editphone.setError(null);
+            return true;
+        }
+    }
     public void onClickView(View v) {
 
         switch (v.getId()){
