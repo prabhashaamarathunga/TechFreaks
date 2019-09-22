@@ -54,7 +54,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
             if(cNumber1.length() != 10){
                 Toast.makeText(this, "Please Enter A Valid Phone Number!", Toast.LENGTH_SHORT).show();
             }
-            if(!pass1.equals(cpass1)){
+            else if(!pass1.equals(cpass1)){
                 Toast t = Toast.makeText(getApplicationContext(), "Passwords Are Not Matching!", Toast.LENGTH_LONG);
                 t.show();
             }
