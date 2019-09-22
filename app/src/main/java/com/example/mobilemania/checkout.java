@@ -1,6 +1,4 @@
 package com.example.mobilemania;
-
-
         import androidx.appcompat.app.AppCompatActivity;
         import android.content.Intent;
         import android.database.Cursor;
@@ -9,6 +7,7 @@ package com.example.mobilemania;
         import android.widget.AdapterView;
         import android.widget.ArrayAdapter;
         import android.widget.ListView;
+        import android.widget.TextView;
         import android.widget.Toast;
         import com.example.mobilemania.Database.DBHelper;
         import java.util.ArrayList;
@@ -17,6 +16,8 @@ public class checkout extends AppCompatActivity{
 
     DBHelper dbHelper;
     ListView cartView;
+    TextView Item;
+    String Itemv;
 
     ArrayList<String> listItem;
     ArrayAdapter adapter;
@@ -29,8 +30,11 @@ public class checkout extends AppCompatActivity{
         dbHelper = new DBHelper(this);
         cartView = findViewById(R.id.cart_view);
         listItem = new ArrayList<>();
-
+        Item = findViewById(R.id.itemcart);
         viewCheck();
+
+        Itemv = getIntent().getExtras().getString("Item");
+        Item.setText(Itemv);
 
         cartView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

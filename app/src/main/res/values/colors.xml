@@ -6,4 +6,6 @@
     <color name="colorFontLogin">#C0C0C0</color>
     <color name="colorUpdateBtn">#A52A2A</color>
     <color name="backBtn">#6DE166</color>
+    <color name="titleAdd">#000080</color>
+    <color name="textclr">#d3d3d3</color>
 </resources>

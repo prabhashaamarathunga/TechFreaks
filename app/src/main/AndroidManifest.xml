@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mobilemania">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -27,6 +29,9 @@
         <activity android:name=".UserMain" />
         <activity android:name=".ADminMenu" />
         <activity android:name=".Registration" />
+        <activity android:name=".ItemList"/>
+        <activity android:name=".LoginItemList"/>
+        <activity android:name=".ItemMainActivity"/>
     </application>
 
 </manifest>

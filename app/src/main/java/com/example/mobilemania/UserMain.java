@@ -19,14 +19,15 @@ public class UserMain extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("MobileMania", MODE_PRIVATE);
         String uName = sharedPreferences.getString("username", null);
         Log.d("Maneesha", uName);
+
     }
     public void onClickAcc(View view){
         Intent intent = new Intent(UserMain.this, UserAccount.class);
         startActivity(intent);
     }
     public void onClickBuy(View view){
-//        Intent intent = new Intent(this, BuyItems.class);
-//        startActivity(intent);
+      Intent intent = new Intent(this, LoginItemList.class);
+       startActivity(intent);
     }
 
     public void onClickManage_orders(View view){
@@ -38,4 +39,6 @@ public class UserMain extends AppCompatActivity {
         Intent intent = new Intent(this, Login.class);
         startActivity(intent);
     }
+
+
 }

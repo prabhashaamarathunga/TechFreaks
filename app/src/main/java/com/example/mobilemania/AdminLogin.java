@@ -48,7 +48,7 @@ public class AdminLogin extends AppCompatActivity {
             int loginResult = db.adminlogin(password1);
 
             if(loginResult == 1) {
-                Intent intent = new Intent(AdminLogin.this, payment.class);
+                Intent intent = new Intent(AdminLogin.this, ItemMainActivity.class);
                 Toast.makeText(this, "Logged in Successfully!", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
                 return;

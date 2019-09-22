@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBMobileMania extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "MobileMania.db";
+    public static final String DATABASE_NAME = "MobileMania255.db";
     public static final String TABLE_NAME = "orders";
     public static final String COL_1 = "ID";
     public static final String COL_2 = "Name";
