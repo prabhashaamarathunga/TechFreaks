@@ -55,7 +55,13 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
 
         int numberCheck = cNumber1.length();
 
+
+  
         if(!fname1.equals("") && !lname1.equals("") && !uname1.equals("") && !pass1.equals("") && !cpass1.equals("") && !address1.equals("") && !cNumber1.equals("")){
+            if(numberCheck != 10){
+                Toast.makeText(this, "Please Enter A Valid Phone Number!", Toast.LENGTH_SHORT).show();
+            }
+
             if(!pass1.equals(cpass1)){
                 Toast t = Toast.makeText(getApplicationContext(), "Passwords Are Not Matching!", Toast.LENGTH_LONG);
                 t.show();
@@ -71,9 +77,6 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                     t.show();
                 }
             }
-        }
-        else if(numberCheck != 10){
-            Toast.makeText(this, "Please Enter A Valid Phone Number!", Toast.LENGTH_SHORT).show();
         }
         else{
             Toast toast = Toast.makeText(getApplicationContext(), "Empty Fields!", Toast.LENGTH_LONG);
