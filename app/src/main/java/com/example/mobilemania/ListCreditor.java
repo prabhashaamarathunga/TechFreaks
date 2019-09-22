@@ -7,7 +7,7 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ListDeliverer extends AppCompatActivity {
+public class ListCreditor extends AppCompatActivity {
 
     ListView listView;
     SQLiteDatabase sqLiteDatabase;

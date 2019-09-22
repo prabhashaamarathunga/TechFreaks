@@ -36,7 +36,7 @@
         <activity android:name=".assign_delivery"/>
         <activity android:name=".UpdateDeliverer" />
         <activity android:name=".SearchDeliverer" />
-        <activity android:name=".ListCreditors" />
+        <activity android:name=".ListCreditor" />
         <activity android:name=".DelivereyHome" />
         <activity android:name=".AddDeliverer" />
     </application>
