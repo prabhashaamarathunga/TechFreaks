@@ -31,7 +31,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 UsrMaster.Usr._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 UsrMaster.Usr.COLUMN_NAME_FIRSTNAME + " TEXT," +
                 UsrMaster.Usr.COLUMN_NAME_LASTNAME + " TEXT," +
-                UsrMaster.Usr.COLUMN_NAME_USERNAME + " TEXT," +
+                UsrMaster.Usr.COLUMN_NAME_USERNAME + " TEXT UNIQUE," +
                 UsrMaster.Usr.COLUMN_NAME_PASSWORD + " TEXT," +
                 UsrMaster.Usr.COLUMN_NAME_CONFIRMPASSWORD + " TEXT," +
                 UsrMaster.Usr.COLUMN_NAME_ADDRESS + " TEXT," +

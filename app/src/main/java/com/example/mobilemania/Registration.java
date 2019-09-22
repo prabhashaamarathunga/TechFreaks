@@ -1,5 +1,4 @@
 package com.example.mobilemania;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -39,11 +38,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         addUser();
-
     }
-
-
-
     private void addUser(){
         String fname1 = fname.getText().toString();
         String lname1 = lname.getText().toString();
@@ -55,13 +50,10 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
 
         int numberCheck = cNumber1.length();
 
-
-  
         if(!fname1.equals("") && !lname1.equals("") && !uname1.equals("") && !pass1.equals("") && !cpass1.equals("") && !address1.equals("") && !cNumber1.equals("")){
             if(numberCheck != 10){
                 Toast.makeText(this, "Please Enter A Valid Phone Number!", Toast.LENGTH_SHORT).show();
             }
-
             if(!pass1.equals(cpass1)){
                 Toast t = Toast.makeText(getApplicationContext(), "Passwords Are Not Matching!", Toast.LENGTH_LONG);
                 t.show();
@@ -87,13 +79,8 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         //Existing username found
         //if(insertResult == 0)
         //{
-
             //getEmail.setError(getString(R.string.this_email_is_already_in_our_database_please_provide_another_email_address));
             //return;
         //}
-
-
     }
-
-
 }
