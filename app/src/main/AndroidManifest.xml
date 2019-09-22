@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mobilemania">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
@@ -14,7 +16,6 @@
         <activity android:name=".AdminLogin"></activity>
         <activity android:name=".yourOrders" />
         <activity android:name=".ViewPayment" />
-        <activity android:name=".Waiting" />
         <activity android:name=".payment" />
         <activity android:name=".checkout" />
         <activity android:name=".MainActivity">
@@ -27,11 +28,17 @@
         <activity android:name=".UserAccount" />
         <activity android:name=".Login" />
         <activity android:name=".UserMain" />
-        <activity android:name=".ADminMenu" />
+        <activity android:name=".AdminMenu" />
         <activity android:name=".Registration" />
         <activity android:name=".ItemList"/>
         <activity android:name=".LoginItemList"/>
         <activity android:name=".ItemMainActivity"/>
+        <activity android:name=".assign_delivery"/>
+        <activity android:name=".UpdateDeliverer" />
+        <activity android:name=".SearchDeliverer" />
+        <activity android:name=".ListCreditors" />
+        <activity android:name=".DelivereyHome" />
+        <activity android:name=".AddDeliverer" />
     </application>
 
 </manifest>
