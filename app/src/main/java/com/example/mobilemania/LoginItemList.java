@@ -61,13 +61,8 @@ public class LoginItemList extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int item) {
                         if (item == 0) {
                             //Intent change for addtocart
-                            String name = cursor.getString(1);
-                            list.get(item);
                             Intent intent = new Intent(LoginItemList.this, checkout.class);
-                            intent.putExtra("Item", name);
                             startActivity(intent);
-                            finish();
-
                         }
                     }
                 });

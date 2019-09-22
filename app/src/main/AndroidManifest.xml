@@ -14,7 +14,6 @@
         <activity android:name=".AdminLogin"></activity>
         <activity android:name=".yourOrders" />
         <activity android:name=".ViewPayment" />
-        <activity android:name=".Waiting" />
         <activity android:name=".payment" />
         <activity android:name=".checkout" />
         <activity android:name=".MainActivity">
@@ -27,7 +26,7 @@
         <activity android:name=".UserAccount" />
         <activity android:name=".Login" />
         <activity android:name=".UserMain" />
-        <activity android:name=".ADminMenu" />
+        <activity android:name=".AdminMenu" />
         <activity android:name=".Registration" />
         <activity android:name=".ItemList"/>
         <activity android:name=".LoginItemList"/>
