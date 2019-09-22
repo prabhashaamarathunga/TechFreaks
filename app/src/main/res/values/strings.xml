@@ -21,12 +21,10 @@
     <string name="addressin"></string>
     <string name="pay">PAY</string>
     <string name="item1">ITEM 1</string>
-    <string name="register">REGISTER</string>
-    <string name="login">LOGIN</string>
+    <string name="login_main">LOGIN</string>
     <string name="vaddress"></string>
     <string name="vname"></string>
     <string name="vphone"></string>
-
     <string name="cdelete">DELETE</string>
     <string name="cupdate">UPDATE</string>
     <string name="cconfirm">CONFIRM</string>
@@ -45,6 +43,38 @@
         <item>VISA</item>
         <item>MasterCard</item>
     </string-array>
+
+
+    -----------------------Maneesha---------------------------------
+    <string name="textView1">User Name</string>
+    <string name="UserName">Enter your user name</string>
+    <string name="textView2">Password</string>
+    <string name="Password">Enter Your Password</string>
+    <string name="login">Login</string>
+    <string name="Register">Register</string>
+    <string name="textView">First Name</string>
+    <string name="textView3">Last Name</string>
+    <string name="textView5">Confirm Password</string>
+    <string name="textView7">Address</string>
+    <string name="textView8">Contact Number</string>
+    <string name="createAcc">Create Account</string>
+    <string name="textView9">Welcome to MobileMania</string>
+    <string name="proceed">Proceed</string>
+    <string name="logInAsAdmin">Log In As Admin</string>
+    <string name="logInAsUser">Log In As User</string>
+    <string name="logInAsDeliveryOperator">Log In As Delivery Operator</string>
+    <string name="logInAsDeliveryPerson">Log In As Delivery Person</string>
+    <string name="Item">Item Management</string>
+    <string name="User">User Management</string>
+    <string name="Delivery">Delivery Management</string>
+    <string name="UpdateButton">Update Details</string>
+    <string name="DeleteAccount">Delete My Account</string>
+    <string name="AccountDetails">My Account </string>
+    <string name="btnAccount">My Account</string>
+    <string name="btnBuy">BUY</string>
+    <string name="btnBack">Back</string>
+    <string name="btnView">View</string>
+    <string name="manage_orders">Manage Orders</string>
 
 
 </resources>

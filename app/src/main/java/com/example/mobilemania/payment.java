@@ -37,8 +37,8 @@ public class payment extends AppCompatActivity{
                BtnPay.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                       //if (!validateName() | !validatePhone() | !validateEmail() | !validateCard() | !validateAddress()){
-                          // return;}
+                       if (!validateName() | !validatePhone() | !validateEmail() | !validateCard() | !validateAddress()){
+                           return;}
                         Intent intent = new Intent(payment.this, ViewPayment.class);
                         Namevp = Name.getEditText().getText().toString();
                         MobileNovp = MobileNo.getEditText().getText().toString();

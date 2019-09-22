@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/regback"
+    tools:context=".Registration">
+
+    <TextView
+        android:id="@+id/txtfName"
+        android:layout_width="133dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/textView"
+        android:textColor="@color/colorFontLogin"
+        android:textColorHint="@color/colorFontLogin"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtlname3"
+        app:layout_constraintEnd_toStartOf="@+id/firstName"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtlname3"
+        android:layout_width="133dp"
+        android:layout_height="47dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/textView3"
+        android:textColor="@color/colorFontLogin"
+        android:textColorHint="@color/colorFontLogin"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtuName"
+        app:layout_constraintEnd_toStartOf="@+id/password"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtfName" />
+
+    <TextView
+        android:id="@+id/txtuName"
+        android:layout_width="134dp"
+        android:layout_height="48dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/textView1"
+        android:textColor="@color/colorFontLogin"
+        android:textColorHint="@color/colorFontLogin"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtpassword"
+        app:layout_constraintEnd_toStartOf="@+id/password"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtlname3" />
+
+    <EditText
+        android:id="@+id/firstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/colorFontLogin"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorFontLogin"
+        android:textColorHint="@color/colorFontLogin"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtfName"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/lastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/colorFontLogin"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorFontLogin"
+        android:textColorHint="@color/colorFontLogin"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtlname3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtlname3" />
+
+    <EditText
+        android:id="@+id/UserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorFontLogin"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorFontLogin"
+        android:textColorHint="@color/colorFontLogin"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtuName"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtpassword"
+        android:layout_width="133dp"
+        android:layout_height="41dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/textView2"
+        android:textColor="@color/colorFontLogin"
+        android:textColorHint="@color/colorFontLogin"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtcPassword"
+        app:layout_constraintEnd_toStartOf="@+id/password"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtuName" />
+
+    <TextView
+        android:id="@+id/txtcPassword"
+        android:layout_width="128dp"
+        android:layout_height="46dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/textView5"
+        android:textColor="@color/colorFontLogin"
+        android:textColorHint="@color/colorFontLogin"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtAddress"
+        app:layout_constraintEnd_toStartOf="@+id/address"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtpassword" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorFontLogin"
+        android:ems="10"
+        android:textColor="@color/colorFontLogin"
+        android:textColorHint="@color/colorFontLogin"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtpassword"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txtAddress"
+        android:layout_width="125dp"
+        android:layout_height="44dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/textView7"
+        android:textColor="@color/colorFontLogin"
+        android:textColorHint="@color/colorFontLogin"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtcNumber"
+        app:layout_constraintEnd_toStartOf="@+id/address"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtcPassword" />
+
+    <TextView
+        android:id="@+id/txtcNumber"
+        android:layout_width="125dp"
+        android:layout_height="41dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/textView8"
+        android:textColor="@color/colorFontLogin"
+        android:textColorHint="@color/colorFontLogin"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btncreateAcc"
+        app:layout_constraintEnd_toStartOf="@+id/cNumber"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddress" />
+
+    <EditText
+        android:id="@+id/cNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/colorFontLogin"
+        android:ems="10"
+        android:textColor="@color/colorFontLogin"
+        android:textColorHint="@color/colorFontLogin"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtcNumber"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btncreateAcc"
+        android:layout_width="252dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onClick"
+        android:text="@string/createAcc"
+        android:textSize="18sp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.87" />
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/colorFontLogin"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorFontLogin"
+        android:textColorHint="@color/colorFontLogin"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtAddress"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/cpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/colorFontLogin"
+        android:ems="10"
+        android:textColor="@color/colorFontLogin"
+        android:textColorHint="@color/colorFontLogin"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtcPassword"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

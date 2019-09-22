@@ -15,6 +15,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void onClickLogin_main(View view){
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+    }
+
     public void onClickCheckOut(View view){
         Intent intent = new Intent(this, checkout.class);
         startActivity(intent);

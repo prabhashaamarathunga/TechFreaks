@@ -14,5 +14,7 @@ public final class UsersMaster {
         public static final String COLUMN_NAME_ADDRESS = "address";
         public static final String COLUMN_NAME_EMAIL = "email";
         public static final String COLUMN_NAME_ITEM = "item";
+
+
     }
 }
