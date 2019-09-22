@@ -5,7 +5,7 @@
     android:id="@+id/checkoutapp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@android:color/background_light"
     tools:context=".checkout">
 
     <Button
@@ -36,38 +36,35 @@
         app:layout_constraintEnd_toStartOf="@+id/checkout"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ListView
-        android:id="@+id/cart_view"
-        android:layout_width="372dp"
-        android:layout_height="455dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="56dp"
-        android:backgroundTint="@android:color/background_light"
-        app:layout_constraintBottom_toTopOf="@+id/checkout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/order" />
-
     <TextView
         android:id="@+id/order"
         android:layout_width="405dp"
         android:layout_height="58dp"
         android:layout_marginStart="122dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="112dp"
         android:layout_marginEnd="123dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="45dp"
         android:background="@android:drawable/dialog_frame"
         android:backgroundTint="@android:color/background_light"
         android:text="@string/order"
         android:textAlignment="center"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/cart_view"
+        app:layout_constraintBottom_toTopOf="@+id/item"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item"
+        android:layout_width="366dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="349dp"
+        app:layout_constraintBottom_toTopOf="@+id/checkout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

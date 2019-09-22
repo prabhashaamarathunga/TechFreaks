@@ -12,12 +12,13 @@ import android.widget.GridView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
+import java.util.jar.Attributes;
 
 public class LoginItemList extends AppCompatActivity {
     GridView gridView;
     ArrayList<Item> list;
     ItemListAdapter adapter = null;
-    public static SQLiteHelper sqLiteHelper;
+    SQLiteHelper sqLiteHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,7 @@ public class LoginItemList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loginitem_list);
 
-        sqLiteHelper = new SQLiteHelper(this, "DBMobileMania.sqlite", null, 1);
+        sqLiteHelper = new SQLiteHelper(this, "DBMobileMania", null, 1);
 
         gridView = (GridView) findViewById(R.id.gridView);
         list = new ArrayList<>();
@@ -60,9 +61,12 @@ public class LoginItemList extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int item) {
                         if (item == 0) {
                             //Intent change for addtocart
+                            String name = cursor.getString(1);
+                            list.get(item);
                             Intent intent = new Intent(LoginItemList.this, checkout.class);
-                           intent.putExtra("Item",cursor.getString(1));
+                            intent.putExtra("Item", name);
                             startActivity(intent);
+                            finish();
 
                         }
                     }
