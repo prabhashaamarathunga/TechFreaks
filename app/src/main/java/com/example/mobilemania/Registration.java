@@ -1,5 +1,4 @@
 package com.example.mobilemania;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -39,11 +38,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         addUser();
-
     }
-
-
-
     private void addUser(){
         String fname1 = fname.getText().toString();
         String lname1 = lname.getText().toString();
@@ -53,16 +48,20 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         String address1 = address.getText().toString();
         String cNumber1 = cNumber.getText().toString();
 
-        int numberCheck = cNumber1.length();
-
-
-  
         if(!fname1.equals("") && !lname1.equals("") && !uname1.equals("") && !pass1.equals("") && !cpass1.equals("") && !address1.equals("") && !cNumber1.equals("")){
-            if(numberCheck != 10){
+            boolean insertResult = dbHelper.addUsrDetails(fname.getText().toString(), lname.getText().toString(), uname.getText().toString(), pass.getText().toString(), cpass.getText().toString(), address.getText().toString(), cNumber.getText().toString());
+
+        if(cNumber1.length() != 10){
                 Toast.makeText(this, "Please Enter A Valid Phone Number!", Toast.LENGTH_SHORT).show();
             }
+            else if(!insertResult)//Existing username found
+            {
+                Toast.makeText(this, "This username is already in the system. Please enter another one!!!", Toast.LENGTH_SHORT).show();
+                //.setError(getString(R.string.this_email_is_already_in_our_database_please_provide_another_email_address));
+                return;
+            }
 
-            if(!pass1.equals(cpass1)){
+            else if(!pass1.equals(cpass1)){
                 Toast t = Toast.makeText(getApplicationContext(), "Passwords Are Not Matching!", Toast.LENGTH_LONG);
                 t.show();
             }
@@ -82,18 +81,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
             Toast toast = Toast.makeText(getApplicationContext(), "Empty Fields!", Toast.LENGTH_LONG);
             toast.show();
         }
-        //String sqLiteDatabase = DBHelper.DATABASE_NAME;
-        //int insertResult = sqLiteDatabase.addUsrDetails(fname.getText().toString(), lname.getText().toString(), uname.getText().toString(), pass.getText().toString(), cpass.getText().toString(), address.getText().toString(), cNumber.getText().toString()));
-        //Existing username found
-        //if(insertResult == 0)
-        //{
-
-            //getEmail.setError(getString(R.string.this_email_is_already_in_our_database_please_provide_another_email_address));
-            //return;
-        //}
 
 
     }
-
-
 }
