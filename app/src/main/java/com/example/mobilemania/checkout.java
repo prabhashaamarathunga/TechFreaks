@@ -14,22 +14,26 @@ package com.example.mobilemania;
 
 public class checkout extends AppCompatActivity{
 
+    TextView orderItem;
+    String Item;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
 
+        orderItem = findViewById(R.id.cart_view);
+        Item = getIntent().getExtras().getString("item");
+        orderItem.setText(Item);
 
         getIntent();
     }
 
 
 
-
-
-
     public void onClickcheckout(View view){
         Intent intent = new Intent(this, payment.class);
+        intent.putExtra("item", Item);
         startActivity(intent);
     }
 

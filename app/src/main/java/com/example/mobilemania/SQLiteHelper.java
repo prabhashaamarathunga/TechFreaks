@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
+import java.sql.SQLException;
 
 public class SQLiteHelper extends SQLiteOpenHelper {
 
@@ -63,6 +64,20 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     public Cursor getData(String sql){
         SQLiteDatabase database = getReadableDatabase();
         return database.rawQuery(sql, null);
+    }
+
+
+    public String orderadd(long id) {
+
+        String rv = "not found";
+        SQLiteDatabase db = this.getWritableDatabase();
+        String whereclause = "id=?";
+        String[] whereargs = new String[]{String.valueOf(id)};
+        Cursor csr = db.query("ITEM",null,whereclause,whereargs,null,null,null);
+        if (csr.moveToFirst()) {
+            rv = csr.getString(csr.getColumnIndex("name"));
+        }
+        return rv;
     }
 
     @Override

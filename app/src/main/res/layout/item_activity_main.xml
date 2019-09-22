@@ -58,21 +58,6 @@
         android:src="@drawable/imagepic" />
 
     <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="152dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="54dp"
-        android:layout_marginEnd="234dp"
-        android:layout_marginRight="234dp"
-        android:background="@drawable/custom_button"
-        android:text="@string/add"
-        android:textColor="#ffffff"
-        android:textSize="20dp" />
-
-    <Button
         android:id="@+id/btnList"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
@@ -83,11 +68,26 @@
         android:layout_alignParentRight="true"
         android:layout_marginStart="195dp"
         android:layout_marginLeft="195dp"
-        android:layout_marginTop="-48dp"
-        android:layout_marginEnd="53dp"
-        android:layout_marginRight="53dp"
+        android:layout_marginTop="-47dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
         android:background="@drawable/custom_button"
         android:text="@string/item_list"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="233dp"
+        android:layout_marginRight="233dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/add"
         android:textColor="#ffffff"
         android:textSize="20dp" />
 
@@ -121,19 +121,22 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="137dp"
-        android:layout_height="wrap_content"
+        android:layout_width="223dp"
+        android:layout_height="30dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="false"
-        android:layout_alignParentTop="false"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="false"
         android:layout_alignParentBottom="false"
-        android:layout_marginStart="128dp"
+        android:layout_marginStart="83dp"
         android:layout_marginLeft="128dp"
-        android:layout_marginTop="577dp"
-        android:layout_marginEnd="145dp"
+        android:layout_marginTop="559dp"
+        android:layout_marginEnd="105dp"
         android:layout_marginRight="145dp"
         android:layout_marginBottom="106dp"
-        android:text="Button" />
+        android:background="@drawable/custom_button"
+        android:text="@string/keepshopping"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
 </RelativeLayout>

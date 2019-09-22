@@ -50,7 +50,7 @@ public class LoginItemList extends AppCompatActivity {
 
         gridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, final long id) {
 
                 CharSequence[] items = {"Add to cart"};
                 AlertDialog.Builder dialog = new AlertDialog.Builder(LoginItemList.this);
@@ -62,6 +62,8 @@ public class LoginItemList extends AppCompatActivity {
                         if (item == 0) {
                             //Intent change for addtocart
                             Intent intent = new Intent(LoginItemList.this, checkout.class);
+                            String name = ItemMainActivity.sqLiteHelper.orderadd(2);
+                            intent.putExtra("item", name);
                             startActivity(intent);
                         }
                     }

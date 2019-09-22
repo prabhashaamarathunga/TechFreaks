@@ -15,7 +15,7 @@ public class ViewPayment extends AppCompatActivity {
 
         DBHelper dbHelper;
         TextView Name,Address,Phone,Email,Item;
-        String Namevp, MobileNovp, Addressvp, Emailvp;
+        String Namevp, MobileNovp, Addressvp, Emailvp, Items;
         Button btnAddDetails;
 
     @Override
@@ -37,11 +37,14 @@ public class ViewPayment extends AppCompatActivity {
         MobileNovp = getIntent().getExtras().getString("vpMobileNo");
         Addressvp = getIntent().getExtras().getString("vpAddress");
         Emailvp = getIntent().getExtras().getString("vpEmail");
+        Items = getIntent().getExtras().getString("item");
+
 
         Name.setText(Namevp);
         Address.setText(Addressvp);
         Phone.setText(MobileNovp);
         Email.setText(Emailvp);
+        Item.setText(Items);
 
         addData();
     }
@@ -65,15 +68,6 @@ public class ViewPayment extends AppCompatActivity {
                     }
                 }
         );
-    }
-
-
-    public void onClickAdd(View v) {
-
-        switch (v.getId()){
-            case R.id.cconfirm: addData();
-                break;
-        }
     }
 
     public void onClickManageOrders(View view){

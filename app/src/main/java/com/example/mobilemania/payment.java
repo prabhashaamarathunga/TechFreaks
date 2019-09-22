@@ -18,7 +18,7 @@ public class payment extends AppCompatActivity{
     private TextInputLayout CardNo;
     private TextInputLayout Address;
     Button BtnPay, BtnClear;
-    String Namevp, MobileNovp, Addressvp, Emailvp;
+    String Namevp, MobileNovp, Addressvp, Emailvp,Items;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,11 +44,14 @@ public class payment extends AppCompatActivity{
                         MobileNovp = MobileNo.getEditText().getText().toString();
                         Addressvp = Address.getEditText().getText().toString();
                         Emailvp = Email.getEditText().getText().toString();
+                        Items = getIntent().getExtras().getString("item");
 
                         intent.putExtra("vpName",Namevp);
                         intent.putExtra("vpMobileNo",MobileNovp);
                         intent.putExtra("vpAddress",Addressvp);
                         intent.putExtra("vpEmail",Emailvp);
+                        intent.putExtra("item",Items);
+
                         startActivity(intent);
                         finish();
                     }
