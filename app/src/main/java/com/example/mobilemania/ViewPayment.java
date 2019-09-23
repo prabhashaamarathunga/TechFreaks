@@ -62,9 +62,9 @@ public class ViewPayment extends AppCompatActivity {
                                     Email.getText().toString(),
                                     Item.getText().toString() );
                           if(isInserted = true)
-                              Toast.makeText(ViewPayment.this,"Inserting Succesful",Toast.LENGTH_LONG).show();
+                              Toast.makeText(ViewPayment.this,"Order Placed Successfully",Toast.LENGTH_LONG).show();
                           else
-                              Toast.makeText(ViewPayment.this,"Inserting Failed",Toast.LENGTH_LONG).show();
+                              Toast.makeText(ViewPayment.this,"Operation Failed",Toast.LENGTH_LONG).show();
                     }
                 }
         );

@@ -8,22 +8,6 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/next"
-        android:layout_width="wrap_content"
-        android:layout_height="36dp"
-        android:layout_marginStart="275dp"
-        android:layout_marginTop="583dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="112dp"
-        android:background="@android:drawable/sym_def_app_icon"
-        android:onClick="onClickCheckOut"
-        android:text="@string/checkoutapp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/login_main"
         android:layout_width="205dp"
         android:layout_height="70dp"
@@ -43,19 +27,4 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
-    <Button
-        android:id="@+id/view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="274dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="44dp"
-        android:onClick="onClickView"
-        android:text="@string/view"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/next" />
 </androidx.constraintlayout.widget.ConstraintLayout>

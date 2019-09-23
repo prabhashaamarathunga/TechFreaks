@@ -86,9 +86,9 @@ public class yourOrders extends AppCompatActivity {
                                 editemail.getEditText().getText().toString());
 
                         if(isUpdate == true)
-                            Toast.makeText(yourOrders.this,"Updated Succesful",Toast.LENGTH_LONG).show();
+                            Toast.makeText(yourOrders.this,"Order Updated",Toast.LENGTH_LONG).show();
                         else
-                            Toast.makeText(yourOrders.this,"Update Failed",Toast.LENGTH_LONG).show();
+                            Toast.makeText(yourOrders.this,"Operation Failed",Toast.LENGTH_LONG).show();
                     }
                 }
         );
@@ -101,9 +101,9 @@ public class yourOrders extends AppCompatActivity {
                     public void onClick(View v) {
                         Integer deletedRows = dbHelper.deleteOrders(editid.getEditText().getText().toString());
                         if(deletedRows > 0)
-                            Toast.makeText(yourOrders.this,"Deleted Succesful",Toast.LENGTH_LONG).show();
+                            Toast.makeText(yourOrders.this,"Order Deleted",Toast.LENGTH_LONG).show();
                         else
-                            Toast.makeText(yourOrders.this,"Deleting Failed",Toast.LENGTH_LONG).show();
+                            Toast.makeText(yourOrders.this,"Operation Failed",Toast.LENGTH_LONG).show();
                     }
                 }
         );
