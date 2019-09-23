@@ -126,4 +126,12 @@
         android:onClick="onClickDelete"
         android:text="@string/delete_orders" />
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="onClickHome"
+        android:text="Home" />
+
+</LinearLayout>

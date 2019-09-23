@@ -14,7 +14,7 @@
         android:layout_marginStart="157dp"
         android:layout_marginTop="461dp"
         android:layout_marginEnd="167dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="50dp"
         android:background="@android:drawable/editbox_dropdown_light_frame"
         android:backgroundTint="@color/design_default_color_primary_dark"
         android:onClick="onClickLogin_main"
@@ -22,9 +22,74 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.653" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="417dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="150dp"
+        android:text="Welcome"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="417dp"
+        android:layout_height="88dp"
+        android:text="Mobile Mania"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="416dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="194dp"
+        android:text="Leading mobile store"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/login_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="224dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="62dp"
+        android:text="Powerd by TechFreaks"
+        android:textColor="@android:color/background_light"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_main"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

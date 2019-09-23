@@ -3,6 +3,7 @@ package com.example.mobilemania;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -207,6 +208,11 @@ public class yourOrders extends AppCompatActivity {
             case R.id.delete_orders: deleteOrder();
                 break;
         }
+    }
+
+    public void onClickHome(View view){
+        Intent intent = new Intent(this, UserMain.class);
+        startActivity(intent);
     }
 
 }
