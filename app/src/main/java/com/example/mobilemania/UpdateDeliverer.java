@@ -62,12 +62,50 @@ public class UpdateDeliverer extends AppCompatActivity {
     amountc = newc_amount.getText().toString();
     datec = newc_date.getText().toString();
 
+        if (namec.isEmpty()||phonec.isEmpty()||amountc.isEmpty()||datec.isEmpty()){
+            if (namec.isEmpty()){
+                newc_name.setError("Name is Required!!!");
+            }
+            if (phonec.isEmpty()){
+                newc_phone.setError("Phone is Required!!!");
+            }
+            if (amountc.isEmpty()){
+                newc_amount.setError("Amount is Required!!!");
+            }
+            if (datec.isEmpty()){
+                newc_date.setError("Date is Required!!!");
+            }
+            Toast.makeText(getApplicationContext(),"Empty field cannot add!!!",Toast.LENGTH_SHORT).show();
+
+        } else if (isPhoneValid(phonec)){
+            newc_phone.setError("Invalid!!!");
+            Toast.makeText(getApplicationContext(),"Phone Number is Invalid!!!",Toast.LENGTH_SHORT).show();
+        }
+
+        else  {
+
     int count = dBhelper.updateCreditors(searchnamec, namec, phonec, amountc,datec,sqLiteDatabase);
 
         Toast.makeText(getApplicationContext(),count+ " Creditors Updated",Toast.LENGTH_LONG).show();
         finish();
     }
 
+        dBhelper.close();
+
+        Intent intent=new Intent(this,ListCreditors.class);
+        startActivity(intent);
+
+    }
+
+    public static boolean isPhoneValid(String phoneNumber){
+        boolean valid = true;
+        String regex = "^(?:00255|\\+255|0)[6-9][0-9]{9}";
+
+        if (!phoneNumber.matches(regex)){
+            valid = false;
+        }
+        return valid;
+    }
 
 
 
